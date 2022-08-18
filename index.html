@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Animal Murder Mystery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <header class="container-fluid bg-dark text-light py-2">
+      <section class="row justify-content-center"> 
+        <div class="col text-center">
+          🙈🔍An animal has been murdered, the but who done it?
+        </div>
+      </section>
+    </header>
+    <main class="container-fluid">
+      <section id="clue" class="row text-center justify-content-center" >
+
+      </section>
+      <section id="suspects" class="row text-center justify-content-center fs-2">
+
+      </section>
+      <section class="row justify-content-center">
+        <div class="col-4 btn btn-primary" onclick="filterMammals()">
+          mammals
+        </div>
+        <div class="col-4 btn btn-secondary" onclick="filterNotMammals()">
+          not mammals
+        </div>
+        <div class="col-4 btn btn-danger" onclick="filterCarnivores()">
+          meat eaters
+        </div>
+        <div class="col-4 btn btn-success" onclick="filterHerbivores()">
+          plant eaters
+        </div>
+        <div class="col-4 btn btn-warning" onclick="filterClaws()">
+          Clawed fighters
+        </div>
+        <div class="col-4 btn btn-black" onclick="filterHorns()">
+          Horned fighters
+        </div>
+        <div class="col-4 btn btn-info" onclick="filterTeeth()">
+          Biters
+        </div>
+        <div class="col-4 btn btn-light" onclick="sortOld()">
+          Old First
+        </div>
+        <div class="col-4 btn btn-dark" onclick="sortYoung()">
+          Young First
+        </div>
+      </section>
+    </main>
+    <footer class="container-fluid">
+      <section class="row" id="animal-buttons">
+        <div class="col-2 btn btn-primary" onclick="guess('Manny')">
+          <h4>🐒</h4>
+          <p>Manny</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('George')">
+          <h4>🦍</h4>
+          <p>George</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Orsen')">
+          <h4>🦧</h4>
+          <p>Orsen</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Oslo')">
+          <h4>🐃</h4>
+          <p>Oslo</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Jeff jr.')">
+          <h4>🐊</h4>
+          <p>Jeff jr.</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Jeff sr.')">
+          <h4>🐊</h4>
+          <p>Jeff sr.</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Madam Blackwell')">
+          <h4>🐈‍⬛</h4>
+          <p>Madam Blackwell</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Tony')">
+          <h4>🐄</h4>
+          <p>Tony</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Chomps')">
+          <h4>🦖</h4>
+          <p>Chomps</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Buster')">
+          <h4>🦕</h4>
+          <p>Buster</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Chuck')">
+          <h4>🐓</h4>
+          <p>Chuck</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Sarah')">
+          <h4>🦥</h4>
+          <p>Sarah</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Gloria')">
+          <h4>🦛</h4>
+          <p>Gloria</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Larry')">
+          <h4>🦏</h4>
+          <p>Larry</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Malinda')">
+          <h4>🦞</h4>
+          <p>Malinda</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Bob')">
+          <h4>🐉</h4>
+          <p>Bob</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Reggie')">
+          <h4>🐢</h4>
+          <p>Reggie</p>
+        </div>
+        <div class="col-2 btn btn-primary" onclick="guess('Jane')">
+          <h4>🦫</h4>
+          <p>Jane</p>
+        </div>
+      </section>
+    </footer>
+
+
+
+
+
+    <script src="app.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
